@@ -11,9 +11,7 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `tslint` is installed on your system. To install `tslint`, do the following:
 
-1. Install Other.
-
-1. Install `tslint` by typing the following in a terminal:
+Install `tslint` by typing the following in a terminal:
    ```
    npm install -g tslint
    ```
