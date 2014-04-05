@@ -19,10 +19,10 @@ class Tslint(Linter):
 
     syntax = 'typescript'
     cmd = ('tslint', '-f', '@')
-    executable = None
     regex = (
         r'^.+?\[(?P<line>\d+), (?P<col>\d+)\]: '
         r'(?P<message>.+)'
     )
     error_stream = util.STREAM_BOTH
-    config_file = ('-c', 'tslint')
+    config_file = ('-c', 'tslint.json')
+    tempfile_suffix = 'ts'
