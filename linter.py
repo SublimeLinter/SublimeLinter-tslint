@@ -26,3 +26,6 @@ class Tslint(Linter):
     error_stream = util.STREAM_BOTH
     config_file = ('-c', 'tslint.json')
     tempfile_suffix = 'ts'
+    version_args = '--version'
+    version_requirement = '>= 0.4.0'
+    version_re = r'(?P<version>\d+\.\d+\.\d+)'
