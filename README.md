@@ -34,6 +34,8 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings]. Also you should provide tslint.json file somewhere in your project directory.
 
+You can configure `tslint` options in the way you would from the command line, with `tslint.json` files. For more information, see the [tslint docs](https://github.com/palantir/tslint). The linter plugin does this by searching for a `tslint.json` file itself, just as `tslint` does from the command line. You may provide a custom config file by setting the linter’s `"args"` setting to `["--config", "/path/to/file"]`. On Windows, be sure to double the backslashes in the path, for example `["--config", "C:\\Users\\Aparajita\\tslint.json"]`.
+
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
