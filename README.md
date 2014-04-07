@@ -9,13 +9,16 @@ This linter plugin for [SublimeLinter][docs] provides an interface to [tslint](h
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
 
 ### Linter installation
-Before using this plugin, you must ensure that `tslint` is installed on your system. To install `tslint`, do the following:
+Before installing this plugin, you must ensure that `tslint` is installed on your system. To install `tslint`, do the following:
 
-Install `tslint` by typing the following in a terminal:
+1. Install [Node.js](http://nodejs.org) (and [npm](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager) on Linux).
+
+1. Install `tslint` by typing the following in a terminal:
    ```
    npm install -g tslint
    ```
 
+1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
 
 ### Linter configuration
 In order for `tslint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
