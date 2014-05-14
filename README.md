@@ -1,7 +1,7 @@
 SublimeLinter-contrib-tslint
 ================================
 
-[![Build Status](https://khancdn.eu/badges.php?service=https%3A%2F%2Ftravis-ci.org%2FSublimeLinter%2FSublimeLinter-contrib-tslint.png%3Fbranch%3Dmaster)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-tslint)
+[![Build Status](https://travis-ci.org/lavrton/SublimeLinter-contrib-tslint.svg?branch=master)](https://travis-ci.org/lavrton/SublimeLinter-contrib-tslint)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [tslint](https://github.com/palantir/tslint). It will be used with files that have the “typescript” syntax.
 
