@@ -1,0 +1,7 @@
+SublimeLinter-contrib-tslint
+-------------------------------
+Plugin now requre tslint with version > 2.4.0.
+
+You can use command:
+
+npm update tslint -g
