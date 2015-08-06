@@ -20,7 +20,7 @@ Before installing this plugin, you must ensure that `tslint` is installed on you
 
 1. If you are using `nvm` and `zsh`, ensure that the line to load `nvm` is in `.zshenv` and not `.zshrc`.
 
-**Note:** This plugin requires `tslint` 0.4.0 or later.
+**Note:** This plugin requires `tslint` 2.4.0 or later.
 
 ### Linter configuration
 In order for `tslint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.

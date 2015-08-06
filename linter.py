@@ -18,7 +18,7 @@ class Tslint(Linter):
     """Provides an interface to tslint."""
 
     syntax = 'typescript'
-    cmd = ('tslint', '-f', '@')
+    cmd = ('tslint', '@')
     regex = (
         r'^.+?\[(?P<line>\d+), (?P<col>\d+)\]: '
         r'(?P<message>.+)'
