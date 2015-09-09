@@ -17,7 +17,7 @@ class Tslint(Linter):
 
     """Provides an interface to tslint."""
 
-    syntax = 'typescript'
+    syntax = ('typescript', 'typescriptreact')
     cmd = ('tslint', '@')
     regex = (
         r'^.+?\[(?P<line>\d+), (?P<col>\d+)\]: '
@@ -25,7 +25,7 @@ class Tslint(Linter):
     )
     error_stream = util.STREAM_BOTH
     config_file = ('--config', 'tslint.json', '~')
-    tempfile_suffix = 'ts'
+    tempfile_suffix = {'typescript': 'ts', 'typescriptreact': 'tsx'}
     version_args = '--version'
     version_requirement = '>= 0.4.0'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
