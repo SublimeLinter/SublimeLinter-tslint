@@ -41,6 +41,20 @@ For general information on how SublimeLinter works with settings, please see [Se
 
 You can configure `tslint` options in the way you would from the command line, with `tslint.json` files. For more information, see the [tslint docs](https://github.com/palantir/tslint). The linter plugin does this by searching for a `tslint.json` file itself, just as `tslint` does from the command line. You may provide a custom config file by setting the linter’s `"args"` setting to `["--config", "/path/to/file"]`. On Windows, be sure to double the backslashes in the path, for example `["--config", "C:\\Users\\Aparajita\\tslint.json"]`.
 
+Alternatively, you can set the `config_filename` option to just the name of the configuration file in order to avoid defining absolute paths.
+
+```json
+    "linters": {
+        "tslint": {
+            "@disable": false,
+            "args": [],
+            "excludes": [
+                "**/node_modules/**"
+            ],
+            "config_filename": "tsconfig.json"
+        }
+    }
+```
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
