@@ -14,7 +14,6 @@ from SublimeLinter.lint import NodeLinter, util
 
 
 class Tslint(NodeLinter):
-
     """Provides an interface to tslint."""
 
     syntax = ('typescript', 'typescriptreact')
