@@ -51,7 +51,7 @@ Alternatively, you can set the `config_filename` option to just the name of the 
             "excludes": [
                 "**/node_modules/**"
             ],
-            "config_filename": "tsconfig.json"
+            "config_filename": "tslint.json"
         }
     }
 ```
