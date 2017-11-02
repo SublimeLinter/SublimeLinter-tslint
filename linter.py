@@ -30,7 +30,7 @@ class Tslint(NodeLinter):
     # tempfile_suffix = {'typescript': 'ts', 'typescriptreact': 'tsx'}
     tempfile_suffix = '-'
     version_args = '--version'
-    version_requirement = '>= 3.14.0'
+    version_requirement = '>= 5.8.0'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
 
     def build_args(self, settings=None):
@@ -43,7 +43,7 @@ class Tslint(NodeLinter):
 
         projectPath = self.__findTSConfigPath()
         if projectPath is not None:
-            out.extend(['--project', projectPath, '--type-check'])
+            out.extend(['--project', projectPath])
 
         # Reset the value of config_file so that this can apply per-project.
         self.config_file = backup
