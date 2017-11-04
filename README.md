@@ -56,6 +56,17 @@ Alternatively, you can set the `config_filename` option to just the name of the 
     }
 ```
 
+Also, remember to set your project `tsconfig.json` accordingly, so that it includes paths used by SublimeLinter *working copies*. For example:
+
+```json
+    "include": [
+        "/var/folders/**/*.tsx",
+        "/var/folders/**/*.ts",
+        "./src/**/*.tsx",
+        "./src/**/*.ts"
+    ],
+```
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
