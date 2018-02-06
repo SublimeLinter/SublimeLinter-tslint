@@ -22,7 +22,8 @@ class Tslint(NodeLinter):
     cmd = ('tslint', '@')
     npm_name = 'tslint'
     regex = (
-        r'^.+?\[(?P<line>\d+), (?P<col>\d+)\]: '
+        r'^(?:(?P<error>ERROR)|(?P<warning>WARNING))'
+        r'.+?\[(?P<line>\d+), (?P<col>\d+)\]: '
         r'(?P<message>.+)'
     )
     error_stream = util.STREAM_BOTH
