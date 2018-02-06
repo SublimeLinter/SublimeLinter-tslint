@@ -53,4 +53,3 @@ class Tslint(NodeLinter):
 
     def __findTSConfigPath(self):
         return util.find_file(os.path.dirname(self.filename), 'tsconfig.json')
-   
