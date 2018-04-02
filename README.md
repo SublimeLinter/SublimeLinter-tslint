@@ -1,7 +1,7 @@
-SublimeLinter-contrib-tslint
+SublimeLinter-tslint
 ================================
 
-[![Build Status](https://travis-ci.org/lavrton/SublimeLinter-contrib-tslint.svg?branch=master)](https://travis-ci.org/lavrton/SublimeLinter-contrib-tslint)
+[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-tslint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-tslint)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [tslint](https://github.com/palantir/tslint). It will be used with files that have the “typescript” syntax.
 
@@ -25,7 +25,7 @@ Before installing this plugin, you must ensure that `tslint` is installed on you
 ### Linter configuration
 In order for `tslint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
-Once you have installed and configured `tslint`, you can proceed to install the SublimeLinter-contrib-tslint plugin if it is not yet installed.
+Once you have installed and configured `tslint`, you can proceed to install the SublimeLinter-tslint plugin if it is not yet installed.
 
 ### Plugin installation
 Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
@@ -34,7 +34,7 @@ To install via Package Control, do the following:
 
 1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
-2. When the plugin list appears, type `tslint`. Among the entries you should see `SublimeLinter-contrib-tslint`. If that entry is not highlighted, use the keyboard or mouse to select it.
+2. When the plugin list appears, type `tslint`. Among the entries you should see `SublimeLinter-tslint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings]. Also you should provide tslint.json file somewhere in your project directory.

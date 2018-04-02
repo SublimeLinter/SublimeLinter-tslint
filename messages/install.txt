@@ -1,10 +1,7 @@
-SublimeLinter-contrib-tslint
+SublimeLinter-tslint
 -------------------------------
 This linter plugin for SublimeLinter provides an interface to tslint.
 
-** IMPORTANT! **
+Please read the installation instructions at:
 
-Before this plugin will activate, you *must*
-follow the installation instructions here:
-
-https://github.com/lavrton/SublimeLinter-contrib-tslint
+https://github.com/SublimeLinter/SublimeLinter-tslint

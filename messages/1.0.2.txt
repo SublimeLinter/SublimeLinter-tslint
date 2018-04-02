@@ -1,4 +1,4 @@
-SublimeLinter-contrib-tslint
+SublimeLinter-tslint
 -------------------------------
 Plugin now requre tslint with version > 2.4.0.
 
