@@ -14,7 +14,7 @@ from SublimeLinter.lint import NodeLinter
 
 
 class Tslint(NodeLinter):
-    cmd = ('tslint', '${file}')
+    cmd = 'tslint ${file}'
     npm_name = 'tslint'
     regex = (
         r'^(?:(?P<error>ERROR)|(?P<warning>WARNING))'
