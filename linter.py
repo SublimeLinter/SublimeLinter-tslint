@@ -23,7 +23,7 @@ class Tslint(NodeLinter):
     )
     tempfile_suffix = '-'
     defaults = {
-        'selector': 'source.ts',
+        'selector': 'source.ts, source.tsx',
         '--config': '${folder}/tslint.json',
         '--project': '${folder}'
     }
