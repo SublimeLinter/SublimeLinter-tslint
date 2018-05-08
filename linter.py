@@ -1,16 +1,8 @@
-#
-# linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
-#
-# Written by Anton Lavrenov
-# Copyright (c) 2014 Anton Lavrenov
-#
-# License: MIT
-#
-
-"""This module exports the Tslint plugin class."""
-
+import logging
+import re
 from SublimeLinter.lint import NodeLinter
+
+logger = logging.getLogger('SublimeLinter.plugin.tslint')
 
 
 class Tslint(NodeLinter):
@@ -23,7 +15,15 @@ class Tslint(NodeLinter):
     )
     tempfile_suffix = '-'
     defaults = {
-        'selector': 'source.ts, source.tsx',
-        '--config': '${folder}/tslint.json',
-        '--project': '${folder}'
+        'selector': 'source.ts, source.tsx'
     }
+
+    def on_stderr(self, stderr):
+        # suppress warnings like "rule requires type information"
+
+        stderr = re.sub(
+            'Warning: .+\n', '', stderr)
+
+        if stderr:
+            self.notify_failure()
+            logger.error(stderr)

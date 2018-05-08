@@ -9,7 +9,7 @@ It will be used with files that have the "typescript" syntax.
 
 ## Installation
 
-SublimeLinter must be installed in order to use this plugin. 
+SublimeLinter must be installed in order to use this plugin.
 
 Please use [Package Control](https://packagecontrol.io) to install the linter plugin.
 
@@ -31,17 +31,33 @@ To install `tslint`, do the following:
 - SublimeLinter settings: http://sublimelinter.com/en/latest/settings.html
 - Linter settings: http://sublimelinter.com/en/latest/linter_settings.html
 
-You can configure `tslint` options in the way you would from the command line, with `tslint.json` files. For more information, see the [tslint docs](https://github.com/palantir/tslint). The linter plugin does this by searching for a `tslint.json` file itself, just as `tslint` does from the command line. 
+### TSLint Config
 
-You may provide a custom config file by setting the linter’s `"args"` setting to `["--config", "/path/to/file"]`. On Windows, be sure to double the backslashes in the path, for example `["--config", "C:\\Users\\Aparajita\\tslint.json"]`.
+You can configure `tslint` options in the way you would from the command line, with `tslint.json` files.
+For more information, see the [tslint docs](https://github.com/palantir/tslint).
+The linter plugin does this by searching for a `tslint.json` file itself, just as `tslint` does from the command line.
+
+You may provide a custom config file by setting the linter’s `"args"` setting to `["--config", "/path/to/file"]`.
+On Windows, be sure to double the backslashes in the path, for example `["--config", "C:\\Users\\Aparajita\\tslint.json"]`.
 
 Also, remember to set your project `tsconfig.json` accordingly, so that it includes paths used by SublimeLinter *working copies*. For example:
 
 ```json
-    "include": [
-        "/var/folders/**/*.tsx",
-        "/var/folders/**/*.ts",
-        "./src/**/*.tsx",
-        "./src/**/*.ts"
-    ],
+"include": [
+    "/var/folders/**/*.tsx",
+    "/var/folders/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.ts"
+]
+```
+
+### Using Projects
+
+To enable linting using projects, set the `--project` argument.
+E.g. like so to look for the `tsconfig.json` file in the folder you opened in Sublime Text:
+
+```json
+"tslint": {
+	"args": ["--project", "${folder}"]
+}
 ```
