@@ -1,0 +1,12 @@
+SublimeLinter-tslint 1.6.0
+-------------------------------
+
+Removed the "config" and "project" settings.
+In stead, they can be set using the "args" setting:
+
+"tslint": {
+	"args": ["--project", "${folder}"]
+}
+
+Note, that you need to set the --project arg if you want to enable
+project based linting. This also enables rules that require the type checker.
