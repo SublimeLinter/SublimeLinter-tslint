@@ -1,4 +1,8 @@
+import logging
+import re
 from SublimeLinter.lint import NodeLinter
+
+logger = logging.getLogger('SublimeLinter.plugin.tslint')
 
 
 class Tslint(NodeLinter):
@@ -13,3 +17,13 @@ class Tslint(NodeLinter):
     defaults = {
         'selector': 'source.ts, source.tsx'
     }
+
+    def on_stderr(self, stderr):
+        # suppress warnings like "rule requires type information"
+
+        stderr = re.sub(
+            'Warning: .+\n', '', stderr)
+
+        if stderr:
+            self.notify_failure()
+            logger.error(stderr)
