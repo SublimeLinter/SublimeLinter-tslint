@@ -9,7 +9,7 @@ class Tslint(NodeLinter):
     cmd = 'tslint ${file}'
     npm_name = 'tslint'
     regex = (
-        r'^(?:(?P<error>ERROR)|(?P<warning>WARNING))'
+        r'^(?:(?P<error>ERROR)|(?P<warning>WARNING))?'
         r'.+?\[(?P<line>\d+), (?P<col>\d+)\]: '
         r'(?P<message>.+)'
     )
