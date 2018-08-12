@@ -6,10 +6,13 @@ logger = logging.getLogger('SublimeLinter.plugin.tslint')
 
 
 class Tslint(NodeLinter):
-    cmd = 'tslint ${file}'
+    cmd = 'tslint --format verbose ${file}'
     npm_name = 'tslint'
     regex = (
-        r'^(?:(?P<error>ERROR)|(?P<warning>WARNING))?'
+        r'^(?:'
+        r'(ERROR:\s+\((?P<error>.*)\))|'
+        r'(WARNING:\s+\((?P<warning>.*)\))'
+        r')?'
         r'.+?\[(?P<line>\d+), (?P<col>\d+)\]: '
         r'(?P<message>.+)'
     )
