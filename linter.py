@@ -12,7 +12,8 @@ class Tslint(NodeLinter):
         r'(ERROR:\s+\((?P<error>.*)\))|'
         r'(WARNING:\s+\((?P<warning>.*)\))'
         r')?'
-        r'.+?\[(?P<line>\d+), (?P<col>\d+)\]: '
+        r'\s+(?P<filename>.+?)'
+        r'\[(?P<line>\d+), (?P<col>\d+)\]: '
         r'(?P<message>.+)'
     )
     tempfile_suffix = '-'
