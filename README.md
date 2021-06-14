@@ -4,7 +4,9 @@ SublimeLinter-tslint
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-tslint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-tslint)
 
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [tslint](https://github.com/palantir/tslint).
-It will be used with files that have the "typescript" syntax.
+It will be used with files that have the "typescript" syntax. 
+
+**Note that `tslint` is deprecated and you should migrate to `eslint`.**  This plugin here is to support the legacy.
 
 
 ## Installation
