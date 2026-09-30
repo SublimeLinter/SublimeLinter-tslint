@@ -6,6 +6,7 @@ logger = logging.getLogger('SublimeLinter.plugin.tslint')
 
 
 class Tslint(NodeLinter):
+    column_unit = 'utf16'
     cmd = 'tslint --format verbose ${file}'
     regex = (
         r'^(?:'
